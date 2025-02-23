@@ -18,3 +18,6 @@ def count_less_than(race_times, threshold):
 race_times = [1, 2, 3, 4, 5, 6]
 
 print(count_less_than(race_times, 4))
+print(count_less_than(race_times, 6))
+print(count_less_than(race_times, 7))
+print(count_less_than(race_times, 0))

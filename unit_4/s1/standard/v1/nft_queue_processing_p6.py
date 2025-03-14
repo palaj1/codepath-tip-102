@@ -38,7 +38,7 @@ def process_nft_queue(nft_queue):
 # Time complexity O(n) and space complexity O(n)
 #   * TC - only enqueues entries and then parses them until queue is empty, queue has "n" elements 
 #   * SC - uses a deque and an output list which take "n" elements each
-def process_nft_queue(nft_queue):
+def process_nft_queue_2(nft_queue):
     queue = deque(nft_queue)
     order = []
 
@@ -48,6 +48,8 @@ def process_nft_queue(nft_queue):
 
     return order
 
+
+# =================================== Approach #1 ===================================
 nft_queue = [
     {"name": "Abstract Horizon", "processing_time": 2},
     {"name": "Pixel Dreams", "processing_time": 3},
@@ -67,3 +69,10 @@ nft_queue_3 = [
     {"name": "Galactic Voyage", "processing_time": 6}
 ]
 print(process_nft_queue(nft_queue_3)) # -? ['Crypto Kitty', 'Galactic Voyage']
+
+
+
+# =================================== Approach #2 ===================================
+print(process_nft_queue_2(nft_queue)) # -> ['Abstract Horizon', 'Pixel Dreams', 'Urban Jungle']
+print(process_nft_queue_2(nft_queue_2)) # -> ['Golden Hour', 'Sunset Serenade', 'Ocean Waves']
+print(process_nft_queue_2(nft_queue_3)) # -? ['Crypto Kitty', 'Galactic Voyage']
